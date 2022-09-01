@@ -1,4 +1,4 @@
-package consolereader
+package main
 
 import (
 	"bufio"
@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func consolereader() {
+func main() {
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("Enter text: ")
 	text, _ := reader.ReadString('\n')
