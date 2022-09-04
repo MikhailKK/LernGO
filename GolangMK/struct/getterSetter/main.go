@@ -14,7 +14,7 @@ type cat struct {
 }
 
 func newCat(Name string, Owner string, CountInject int, Age int) cat {
-	return cat{pet: pet{Name: "name", Owner: "Kirill", CountInject: 3}, Age: 8}
+	return cat{pet{Name, Owner, 2}, Age}
 }
 
 func main() {
