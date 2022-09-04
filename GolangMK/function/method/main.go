@@ -8,7 +8,7 @@ type Creature struct {
 }
 
 func (c Creature) Greet() {
-	fmt.Printf("%s says %s", c.Name, c.Greeting)
+	fmt.Printf("%s says %s\n", c.Name, c.Greeting)
 }
 
 func main() {
@@ -16,5 +16,11 @@ func main() {
 		Name:     "Sammy",
 		Greeting: "Hello!",
 	}
+
+	mikka := Creature{
+		Name:     "Mikka",
+		Greeting: "Привет",
+	}
 	Creature.Greet(sammy)
+	Creature.Greet(mikka)
 }

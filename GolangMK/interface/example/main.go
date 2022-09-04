@@ -11,9 +11,9 @@ func (a Article) String() string {
 	return fmt.Sprintf("The %s article written by %s", a.Title, a.Author)
 }
 
-func Print(s fmt.Stringer) {
-	fmt.Println(s)
-}
+// func Print(s fmt.Stringer) {
+// 	fmt.Println(s)
+// }
 
 func main() {
 	art := Article{
@@ -21,5 +21,7 @@ func main() {
 		Author: "Mike",
 	}
 
-	Print(art)
+	// Print(art)
+	fmt.Println(art.String())
+
 }

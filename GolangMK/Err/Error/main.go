@@ -12,7 +12,7 @@ func main() {
 	}
 	fmt.Println(result)
 
-	result, err = joinStringsWithSpace("", "apple")
+	result, err = joinStringsWithSpace("apple", "")
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -24,7 +24,7 @@ func joinStringsWithSpace(str1, str2 string) (string, error) {
 		return "", errors.New("первая строка пустая")
 	}
 	if str2 == "" {
-		return "", errors.New("вторая строка пустая")
+		return "", fmt.Errorf("вторая строка пустая")
 	}
 
 	return str1 + " " + str2, nil
