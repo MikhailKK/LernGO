@@ -1,4 +1,4 @@
-package electronic
+package lerngo
 
 // интерфейсы
 
@@ -18,21 +18,21 @@ type SmartPhone interface {
 
 // структуры
 
-type applePhone struct {
+type ApplePhone struct {
 	Brand string
 	Model string
 	Type  string
 	OS    string
 }
 
-type androidPhone struct {
+type AndroidPhone struct {
 	Brand string
 	Model string
 	Type  string
 	OS    string
 }
 
-type radioPhone struct {
+type RadioPhone struct {
 	Brand        string
 	Model        string
 	Type         string
@@ -40,55 +40,55 @@ type radioPhone struct {
 }
 
 // функции конструкторы для iOS
-func (apple *applePhone) GetBrand() string {
+func (apple *ApplePhone) GetBrand() string {
 	return apple.Brand
 }
 
-func (apple *applePhone) GetModel() string {
+func (apple *ApplePhone) GetModel() string {
 	return apple.Model
 }
 
-func (apple *applePhone) GetType() string {
+func (apple *ApplePhone) GetType() string {
 	apple.Type = "smartPhone"
 	return apple.Type
 }
 
-func (apple *applePhone) GetOS() string {
+func (apple *ApplePhone) GetOS() string {
 	return apple.OS
 }
 
 // функции конструкторы для Android
-func (android *androidPhone) GetBrand() string {
+func (android *AndroidPhone) GetBrand() string {
 	return android.Brand
 }
 
-func (android *androidPhone) GetModel() string {
+func (android *AndroidPhone) GetModel() string {
 	return android.Model
 }
 
-func (android *androidPhone) GetType() string {
+func (android *AndroidPhone) GetType() string {
 	android.Type = "smartPhone"
 	return android.Type
 }
 
-func (android *androidPhone) GetOS() string {
+func (android *AndroidPhone) GetOS() string {
 	return android.OS
 }
 
 // функции конструкторы для стационарного телефона
-func (radio *radioPhone) GetBrand() string {
+func (radio *RadioPhone) GetBrand() string {
 	return radio.Brand
 }
 
-func (radio *radioPhone) GetModel() string {
+func (radio *RadioPhone) GetModel() string {
 	return radio.Model
 }
 
-func (radio *radioPhone) GetType() string {
+func (radio *RadioPhone) GetType() string {
 	radio.Type = "station"
 	return radio.Type
 }
 
-func (radio *radioPhone) GetCountButtons() int {
+func (radio *RadioPhone) GetCountButtons() int {
 	return radio.ButtonsCount
 }
